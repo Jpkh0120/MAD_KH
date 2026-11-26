@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kokhao/block.dart';
 
 void main() {
   runApp(const KokHao());
@@ -21,14 +22,14 @@ class KokHao extends StatelessWidget {
             icon: const Icon(Icons.menu),
           ), // end IconButton
           title: const Text("Profile"),
-          backgroundColor: Colors.green,
+          backgroundColor: Colors.grey,
         ), // end AppBar
         body: Center( // 
           child: Column(
             children: [ 
               const SizedBox(height: 40), 
               const CircleAvatar( 
-                backgroundColor: Colors.green,
+                backgroundColor: Colors.grey,
                 radius: 60,
                 child: CircleAvatar(
                   backgroundImage: AssetImage("assets/images/2.jpg"),
@@ -44,7 +45,7 @@ class KokHao extends StatelessWidget {
                   vertical: 6,
                 ),
                 decoration: BoxDecoration(
-                  color: Colors.green,
+                  color: const Color.fromARGB(255, 195, 198, 195),
                   borderRadius: BorderRadius.circular(88.888),
                 ),
                 child: const Row(
@@ -59,76 +60,34 @@ class KokHao extends StatelessWidget {
                 ),
               ),// end Container
               const SizedBox(height: 40),
-              Padding(
-                padding:const EdgeInsets.symmetric(horizontal: 20),
+              const Padding(
+                padding:EdgeInsets.symmetric(horizontal: 20),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Container(
-                      padding: const EdgeInsets.all(16),
-                      decoration: const BoxDecoration(
-                        color:Colors.green,
-                      ),
-                      child: Column (
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children :[
-                          Image.asset("assets/images/2.jpg",
-                           width:38,
-                          ),
-                          const SizedBox(height:10),
-                          const Text("80%"),
-                          const SizedBox(height:10),
-                          const Text ("Hi Aqil"),
-                        ],
-                      ),
+                  children:[
+                   Block(
+                      "Hi Aqil",
+                      "assets/images/2.jpg",
+                      colour: Colors.green,
+                      number: 80,
                     ),
-                    Container(
-                      padding:EdgeInsets.all(16),
-                      decoration: BoxDecoration(color: Colors.green),
-                      child: Column (
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children:[
-                          Image.asset("assets/images/2.jpg",
-                           width:38
-                           ),
-                           const SizedBox(height:10),
-                           const Text("80%"),
-                           const SizedBox(height:10),
-                           const Text ("Hi Aqil"),
-                      ],
-                      ),
+                    Block(
+                      "Hi Aqil",
+                      "assets/images/2.jpg",
+                      colour: Colors.blue,
+                      number: 80,
                     ),
-                    Container(
-                      padding:EdgeInsets.all(16),
-                      decoration: BoxDecoration(color: Colors.green),
-                      child: Column (
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children:[
-                          Image.asset("assets/images/2.jpg",
-                           width:50
-                           ),
-                           const SizedBox(height:10),
-                           const Text("80%"),
-                           const SizedBox(height:10),
-                           const Text ("Hi Aqil"),
-                      ],
-                      ),
+                    Block(
+                      "Hi Aqil",
+                      "assets/images/2.jpg",
+                      colour: Colors.red,
+                      number: 80,
                     ),
-                     Container(
-                      padding:EdgeInsets.all(16),
-                      decoration: BoxDecoration(color: Colors.green),
-                      child: Column (
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children:[
-                          Image.asset("assets/images/2.jpg",
-                           width:50
-                           ),
-                           const SizedBox(height:10),
-                           const Text("80%"),
-                           const SizedBox(height:10),
-                           const Text ("Hi Aqil"),
-                      ],
-                      ),
+                    Block(
+                      "Hi Aqil",
+                      "assets/images/2.jpg",
+                      colour: Colors.yellow,
+                      number: 80,
                     ),
                   ]   
                 )
